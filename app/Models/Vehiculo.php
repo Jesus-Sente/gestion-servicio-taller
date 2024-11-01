@@ -42,13 +42,13 @@ class Vehiculo extends Model
     {
         return $this->belongsTo(\App\Models\MarcaVehiculo::class, 'marca_vehiculos_id', 'id');
     }
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function servicios()
     {
-        return $this->hasMany(\App\Models\Servicio::class, 'id', 'vehiculo_id');
+        return $this->hasMany(\App\Models\Servicio::class, 'id', 'vehiculos_id');
     }
-    
+
 }

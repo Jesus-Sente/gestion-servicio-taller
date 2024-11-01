@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property $descripcion
  * @property $costo
  * @property $tipo_servicios_id
- * @property $vehiculo_id
+ * @property $vehiculos_id
  * @property $clientes_id
  * @property $created_at
  * @property $updated_at
@@ -35,7 +35,7 @@ class Servicio extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['descripcion', 'costo', 'tipo_servicios_id', 'vehiculo_id', 'clientes_id'];
+    protected $fillable = ['descripcion', 'costo', 'tipo_servicios_id', 'vehiculos_id', 'clientes_id'];
 
 
     /**
@@ -45,7 +45,7 @@ class Servicio extends Model
     {
         return $this->belongsTo(\App\Models\Cliente::class, 'clientes_id', 'id');
     }
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -53,13 +53,13 @@ class Servicio extends Model
     {
         return $this->belongsTo(\App\Models\TipoServicio::class, 'tipo_servicios_id', 'id');
     }
-    
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function vehiculo()
     {
-        return $this->belongsTo(\App\Models\Vehiculo::class, 'vehiculo_id', 'id');
+        return $this->belongsTo(\App\Models\Vehiculo::class, 'vehiculos_id', 'id');
     }
-    
+
 }
