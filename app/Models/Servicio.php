@@ -45,7 +45,7 @@ class Servicio extends Model
     {
         return $this->belongsTo(\App\Models\Cliente::class, 'clientes_id', 'id');
     }
-
+    
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -53,7 +53,7 @@ class Servicio extends Model
     {
         return $this->belongsTo(\App\Models\TipoServicio::class, 'tipo_servicios_id', 'id');
     }
-
+    
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
@@ -61,5 +61,5 @@ class Servicio extends Model
     {
         return $this->belongsTo(\App\Models\Vehiculo::class, 'vehiculos_id', 'id');
     }
-
+    
 }

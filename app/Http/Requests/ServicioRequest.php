@@ -25,7 +25,7 @@ class ServicioRequest extends FormRequest
 			'descripcion' => 'required|string',
 			'costo' => 'required',
 			'tipo_servicios_id' => 'required',
-			'vehiculo_id' => 'required',
+			'vehiculos_id' => 'required',
 			'clientes_id' => 'required',
         ];
     }

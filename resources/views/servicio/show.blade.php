@@ -35,8 +35,8 @@
                             {{ $servicio->tipo_servicios_id }}
                         </div>
                         <div class="form-group mb-2 mb20">
-                            <strong>Vehiculo Id:</strong>
-                            {{ $servicio->vehiculo_id }}
+                            <strong>Vehiculos Id:</strong>
+                            {{ $servicio->vehiculos_id }}
                         </div>
                         <div class="form-group mb-2 mb20">
                             <strong>Clientes Id:</strong>

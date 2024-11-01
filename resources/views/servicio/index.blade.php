@@ -41,7 +41,7 @@
                                     <th >Descripcion</th>
                                     <th >Costo</th>
                                     <th >Tipo Servicios Id</th>
-                                    <th >Vehiculo Id</th>
+                                    <th >Vehiculos Id</th>
                                     <th >Clientes Id</th>
 
                                     <th></th>
@@ -55,7 +55,7 @@
                                         <td >{{ $servicio->descripcion }}</td>
                                         <td >{{ $servicio->costo }}</td>
                                         <td >{{ $servicio->tipo_servicios_id }}</td>
-                                        <td >{{ $servicio->vehiculo_id }}</td>
+                                        <td >{{ $servicio->vehiculos_id }}</td>
                                         <td >{{ $servicio->clientes_id }}</td>
 
                                         <td>

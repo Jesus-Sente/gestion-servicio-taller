@@ -17,9 +17,9 @@
             {!! $errors->first('tipo_servicios_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="vehiculo_id" class="form-label">{{ __('Vehiculo Id') }}</label>
-            <input type="text" name="vehiculo_id" class="form-control @error('vehiculo_id') is-invalid @enderror" value="{{ old('vehiculo_id', $servicio?->vehiculo_id) }}" id="vehiculo_id" placeholder="Vehiculo Id">
-            {!! $errors->first('vehiculo_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+            <label for="vehiculos_id" class="form-label">{{ __('Vehiculos Id') }}</label>
+            <input type="text" name="vehiculos_id" class="form-control @error('vehiculos_id') is-invalid @enderror" value="{{ old('vehiculos_id', $servicio?->vehiculos_id) }}" id="vehiculos_id" placeholder="Vehiculos Id">
+            {!! $errors->first('vehiculos_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="clientes_id" class="form-label">{{ __('Clientes Id') }}</label>
