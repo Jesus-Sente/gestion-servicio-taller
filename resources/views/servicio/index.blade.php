@@ -1,8 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    Servicios
-@endsection
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
 @section('content')
     <div class="container-fluid">
@@ -16,11 +18,11 @@
                                 {{ __('Servicios') }}
                             </span>
 
-                             <div class="float-right">
+                            <div class="float-right">
                                 <a href="{{ route('servicios.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                    {{ __('Create New') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -33,40 +35,40 @@
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
-                                    <tr>
-                                        <th>No</th>
-                                        
-									<th >Descripcion</th>
-									<th >Costo</th>
-									<th >Tipo Servicios Id</th>
-									<th >Vehiculo Id</th>
-									<th >Clientes Id</th>
+                                <tr>
+                                    <th>No</th>
 
-                                        <th></th>
-                                    </tr>
+                                    <th >Descripcion</th>
+                                    <th >Costo</th>
+                                    <th >Tipo Servicios Id</th>
+                                    <th >Vehiculo Id</th>
+                                    <th >Clientes Id</th>
+
+                                    <th></th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($servicios as $servicio)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
-                                            
-										<td >{{ $servicio->descripcion }}</td>
-										<td >{{ $servicio->costo }}</td>
-										<td >{{ $servicio->tipo_servicios_id }}</td>
-										<td >{{ $servicio->vehiculo_id }}</td>
-										<td >{{ $servicio->clientes_id }}</td>
+                                @foreach ($servicios as $servicio)
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
 
-                                            <td>
-                                                <form action="{{ route('servicios.destroy', $servicio->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('servicios.show', $servicio->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('servicios.edit', $servicio->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                        <td >{{ $servicio->descripcion }}</td>
+                                        <td >{{ $servicio->costo }}</td>
+                                        <td >{{ $servicio->tipo_servicios_id }}</td>
+                                        <td >{{ $servicio->vehiculo_id }}</td>
+                                        <td >{{ $servicio->clientes_id }}</td>
+
+                                        <td>
+                                            <form action="{{ route('servicios.destroy', $servicio->id) }}" method="POST">
+                                                <a class="btn btn-sm btn-primary " href="{{ route('servicios.show', $servicio->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                <a class="btn btn-sm btn-success" href="{{ route('servicios.edit', $servicio->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -76,4 +78,13 @@
             </div>
         </div>
     </div>
-@endsection
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
