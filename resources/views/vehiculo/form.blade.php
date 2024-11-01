@@ -1,6 +1,6 @@
 <div class="row padding-1 p-1">
     <div class="col-md-12">
-        
+
         <div class="form-group mb-2 mb20">
             <label for="modelo" class="form-label">{{ __('Modelo') }}</label>
             <input type="text" name="modelo" class="form-control @error('modelo') is-invalid @enderror" value="{{ old('modelo', $vehiculo?->modelo) }}" id="modelo" placeholder="Modelo">
@@ -12,10 +12,18 @@
             {!! $errors->first('color', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="marca_vehiculos_id" class="form-label">{{ __('Marca Vehiculos Id') }}</label>
-            <input type="text" name="marca_vehiculos_id" class="form-control @error('marca_vehiculos_id') is-invalid @enderror" value="{{ old('marca_vehiculos_id', $vehiculo?->marca_vehiculos_id) }}" id="marca_vehiculos_id" placeholder="Marca Vehiculos Id">
+            <label for="marca_vehiculos_id" class="form-label">{{ __('Marca Vehiculos') }}</label>
+            <select name="marca_vehiculos_id" class="form-control @error('marca_vehiculos_id') is-invalid @enderror" id="marca_vehiculos_id">
+                <option value="">{{ __('Seleccione una marca') }}</option>
+                @foreach (\App\Models\MarcaVehiculo::all() as $marca)
+                    <option value="{{ $marca->id }}" {{ old('marca_vehiculos_id') == $marca->id ? 'selected' : '' }}>
+                        {{ $marca->nombre }} <!-- Asegúrate de que 'nombre' es el campo correcto -->
+                    </option>
+                @endforeach
+            </select>
             {!! $errors->first('marca_vehiculos_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+
 
     </div>
     <div class="col-md-12 mt20 mt-2">
