@@ -39,5 +39,5 @@ class MarcaVehiculo extends Model
     {
         return $this->hasMany(\App\Models\Vehiculo::class, 'id', 'marca_vehiculos_id');
     }
-    
+
 }

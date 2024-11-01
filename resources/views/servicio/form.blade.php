@@ -12,7 +12,7 @@
             {!! $errors->first('costo', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="tipo_servicios_id" class="form-label">{{ __('Tipo Servicios') }}</label>
+            <label for="tipo_servicios_id" class="form-label">{{ __('Tipo Servicio') }}</label>
             <select name="tipo_servicios_id" class="form-control @error('tipo_servicios_id') is-invalid @enderror" id="tipo_servicios_id">
                 <option value="">{{ __('Seleccione un tipo de servicio') }}</option>
                 @foreach (\App\Models\TipoServicio::all() as $tipo)
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group mb-2 mb20">
-            <label for="vehiculos_id" class="form-label">{{ __('Vehiculos') }}</label>
+            <label for="vehiculos_id" class="form-label">{{ __('Vehiculo') }}</label>
             <select name="vehiculos_id" class="form-control @error('vehiculos_id') is-invalid @enderror" id="vehiculos_id">
                 <option value="">{{ __('Seleccione un vehículo') }}</option>
                 @foreach (\App\Models\Vehiculo::all() as $vehiculo)
@@ -38,7 +38,7 @@
         </div>
 
         <div class="form-group mb-2 mb20">
-            <label for="clientes_id" class="form-label">{{ __('Clientes') }}</label>
+            <label for="clientes_id" class="form-label">{{ __('Cliente') }}</label>
             <select name="clientes_id" class="form-control @error('clientes_id') is-invalid @enderror" id="clientes_id">
                 <option value="">{{ __('Seleccione un cliente') }}</option>
                 @foreach (\App\Models\Cliente::all() as $cliente)

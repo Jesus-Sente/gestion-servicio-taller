@@ -38,7 +38,7 @@ class Vehiculo extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function marcaVehiculo()
+    public function marca()
     {
         return $this->belongsTo(\App\Models\MarcaVehiculo::class, 'marca_vehiculos_id', 'id');
     }

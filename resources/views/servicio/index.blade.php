@@ -40,9 +40,9 @@
 
                                     <th >Descripcion</th>
                                     <th >Costo</th>
-                                    <th >Tipo Servicios Id</th>
-                                    <th >Vehiculos Id</th>
-                                    <th >Clientes Id</th>
+                                    <th >Tipo Servicio</th>
+                                    <th >Vehiculo</th>
+                                    <th >Cliente</th>
 
                                     <th></th>
                                 </tr>
@@ -54,9 +54,9 @@
 
                                         <td >{{ $servicio->descripcion }}</td>
                                         <td >{{ $servicio->costo }}</td>
-                                        <td >{{ $servicio->tipo_servicios_id }}</td>
-                                        <td >{{ $servicio->vehiculos_id }}</td>
-                                        <td >{{ $servicio->clientes_id }}</td>
+                                        <td >{{ $servicio->tipo->nombre }}</td>
+                                        <td >{{ $servicio->vehiculo->modelo }}</td>
+                                        <td >{{ $servicio->cliente->nombre }}</td>
 
                                         <td>
                                             <form action="{{ route('servicios.destroy', $servicio->id) }}" method="POST">

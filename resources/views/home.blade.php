@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Hola bien benido a mi pagina de cruds</p>
+    <p>Hola bien benido a mi pagina de cruds de Maestro Detalle</p>
 @stop
 
 @section('css')
