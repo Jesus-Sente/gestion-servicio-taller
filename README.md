@@ -27,4 +27,4 @@ La aplicación incluye autenticación básica y validación de datos, además de
 
 ## Enlace al Sitio de Pruebas
 
-Accede a la versión de prueba de la aplicación en el siguiente enlace: [Sitio de Pruebas](http://prueba-gestion-servicios.com)
+Accede a la versión de prueba de la aplicación en el siguiente enlace: [Sitio de Pruebas](https://github.com/Jesus-Sente/gestion-servicio-taller.git)
